@@ -1,9 +1,14 @@
-let cards = document.getElementsByClassName("card");
-for (let card of cards){
-    card.addEventListener("click", function(e){
-        const name = e.target.parentNode.querySelector('.p_name');
-        const price = e.target.parentNode.querySelector('.p_price');
-        console.log(name);
-        console.log(price);
-    });
+function setInnerText(id, value){
+    let element = document.getElementById(id);
+    element.innerText = value;
+    return element;
+}
+function setValue(id){
+    let element = document.getElementById(id);
+    element.value = "";
+}
+
+function percentage(tk , percent){
+    let myPercentage = tk / 100 * percent;
+    return myPercentage;
 }
